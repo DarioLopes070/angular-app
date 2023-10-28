@@ -1,0 +1,20 @@
+<div class="container">
+    <mat-card>
+        <h1>Faça o Login</h1>
+        <mat-card-content>
+            <form class="login-form">
+                <mat-form-field>
+                    <input matInput name="userApp" placeholder="Usúario" [(ngModel)]="username">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" name="passwordApp" placeholder="Senha" [(ngModel)]="password">
+                </mat-form-field>
+                <span>
+                    {{mensagemLogin}}
+                </span>
+                <button mat-raised-button (click)="btnLogin()" type="submit" color="primary">Entrar</button>
+            </form> 
+        </mat-card-content> 
+    </mat-card>
+
+</div>

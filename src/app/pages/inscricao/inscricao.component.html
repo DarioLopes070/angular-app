@@ -1,0 +1,27 @@
+<div class="container">
+    <mat-card>  
+        <mat-card-content>
+            <h1>Inscrições Online</h1>
+            <div class="inscricao-form">
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input  required [(ngModel)]="inscritoName" name="nome" matInput placeholder="Nome e Sobrenome" >
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label required matInput>Selecione Sua Modalidade</mat-label>
+                    <mat-select>
+                      <mat-option value="1">Futebol</mat-option>
+                      <mat-option value="2">Vôlei</mat-option>
+                      <mat-option value="3">Natação</mat-option>
+                      <mat-option value="4">Basquete</mat-option>
+                      <mat-option value="5">Atletismo</mat-option>
+                      <mat-option value="6">Remo</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-raised-button (click)="enviarinscricao()" color="primary">Enviar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>

@@ -1,0 +1,32 @@
+.navbar{
+    background-color: #343541;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.navbar-brand{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item{
+    margin-right: 10px;
+}
+
+.nav-link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+}
