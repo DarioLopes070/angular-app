@@ -1,9 +1,9 @@
-<app-navbar></app-navbar>
+<app-navbar [Drawer]="drawer" ></app-navbar>
 
-<button type="button" mat-button (click)="drawer.toggle()">
+<!-- <button type="button" mat-button (click)="drawer.toggle()">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
     MENU
-</button>
+</button> -->
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
         <mat-list role="list">

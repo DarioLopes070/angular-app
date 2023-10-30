@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     background-color: #343541;
     color: #ffffff;
     padding: 10px;
@@ -29,4 +29,8 @@
 a{
   display: flex;
   justify-content: center;
-}
+} */
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

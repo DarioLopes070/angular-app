@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 
@@ -43,7 +45,8 @@ import { LoginComponent } from './pages/login/login.component';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    InscricaoComponent
+    InscricaoComponent,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
