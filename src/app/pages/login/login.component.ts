@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private router:Router){
+  constructor(private router:Router, private shared:SharedService){
 
   }
 
@@ -19,10 +20,22 @@ export class LoginComponent {
   password:string="";
   mensagemLogin:string="";
 
+  // btnLogin():void{
+  //   if(this.username=="admin" && this.password=="admin"){
+  //     this.mensagemLogin="Correto!";
+  //     this.shared.setUsername("Dário.Lopes");
+  //     this.router.navigate(["home"]);
+  //   }else{
+  //     this.mensagemLogin="Incorreto!";
+  //   }
+  // }
+
+
   btnLogin():void{
-    if(this.username=="admin" && this.password=="admin"){
+    if(this.username=="admin" || this.username=="123"){
       this.mensagemLogin="Correto!";
-      this.router.navigate(["home"]);
+      this.shared.setUsername(this.username);
+      // this.router.navigate(["home"]);
     }else{
       this.mensagemLogin="Incorreto!";
     }

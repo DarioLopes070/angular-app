@@ -10,12 +10,16 @@
     </div>
 </nav> -->
 
-<p>
-    <mat-toolbar color="primary">
-      <button (click)="showMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+<mat-toolbar color="primary">
+    <button (click)="showMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-    </mat-toolbar>
-</p>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <label>{{usuarioLogado}}</label>
+
+
+    <button (click)="ativar()">Ativar</button>
+    <button (click)="desativar()">Desativar</button>
+</mat-toolbar>

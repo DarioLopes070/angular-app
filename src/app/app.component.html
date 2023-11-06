@@ -11,17 +11,21 @@
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login"></mat-icon>
                 <span>Login</span>
             </mat-list-item>
-            <mat-list-item (click)="drawer.toggle()" routerLink="home" role="listitem">
+            <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" routerLink="home" role="listitem">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
                 <span>Home</span>
             </mat-list-item>
-            <mat-list-item (click)="drawer.toggle()" routerLink="contact" role="listitem">
+            <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" routerLink="contact" role="listitem">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="contacts"></mat-icon>
                 <span>Contacts</span>
             </mat-list-item>
             <mat-list-item (click)="drawer.toggle()" routerLink="inscricao" role="listitem">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="description"></mat-icon>
                 <span>Inscrição</span>
+            </mat-list-item>
+            <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" routerLink="user" role="listitem">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+                <span>Users</span>
             </mat-list-item>
         </mat-list>
     </mat-drawer>

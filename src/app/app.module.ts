@@ -18,6 +18,11 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { AuthguardService } from './shared/authguard.service';
+import { UserComponent } from './pages/user/user.component';
+import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -32,6 +37,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
+    UserComponent,
     
   ],
   imports: [
@@ -46,9 +52,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     FormsModule,
     InscricaoComponent,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthguardService],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
