@@ -22,6 +22,7 @@ import { AuthguardService } from './shared/authguard.service';
 import { UserComponent } from './pages/user/user.component';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { UserFormComponent } from './pages/user-form/user-form.component';
 
 
 
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LoginComponent,
     UserComponent,
+    UserFormComponent,
     
   ],
   imports: [

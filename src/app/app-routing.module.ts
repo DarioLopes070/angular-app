@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { InscricaoComponent } from './pages/inscricao/inscricao.component';
 import { AuthguardService } from './shared/authguard.service';
 import { UserComponent } from './pages/user/user.component';
+import { UserFormComponent } from './pages/user-form/user-form.component';
 
 const routes: Routes = [
   {path: 'home', component:HomeComponent, canActivate:[AuthguardService]},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'inscricao', component:InscricaoComponent},
   {path: 'login', component:LoginComponent},
   {path: 'user', component:UserComponent, canActivate:[AuthguardService]},
+  {path: 'user-form', component:UserFormComponent, canActivate:[AuthguardService]},
   {path: '', redirectTo: 'home', pathMatch:'full'},
 ];
 
