@@ -8,17 +8,57 @@
                     <input  required [(ngModel)]="inscritoName" name="nome" matInput placeholder="Nome e Sobrenome" >
                 </mat-form-field>
 
-                <mat-form-field>
-                    <mat-label required matInput>Selecione Sua Modalidade</mat-label>
-                    <mat-select>
+                <!-- <mat-form-field>
+                    <mat-label>Selecione Sua Modalidade</mat-label>
+                    <mat-select matNativeControl [(ngModel)]="selectedValue" name="modalidade">
+                        @for (modalidade of modalidades; track modalidade) {
+                            <mat-option [value]="modalidade.value">{{modalidade.viewValue}}</mat-option>
+                        }
+
+
                       <mat-option value="1">Futebol</mat-option>
                       <mat-option value="2">Vôlei</mat-option>
                       <mat-option value="3">Natação</mat-option>
                       <mat-option value="4">Basquete</mat-option>
                       <mat-option value="5">Atletismo</mat-option>
-                      <mat-option value="6">Remo</mat-option>
+                      <mat-option value="6">Remo</mat-option> 
                     </mat-select>
                 </mat-form-field>
+                <p> Selected modalidade: {{selectedValue}} </p> -->
+
+
+
+
+
+                <mat-form-field>
+                    <mat-label>Favorite food</mat-label>
+                    <mat-select required matInput [(ngModel)]="selectedValue" name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">{{food.viewValue}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <p> Selected food: {{selectedValue}} </p>
+                <h4>native html select</h4>
+
+
+
+
+
+
+
+                <!-- <mat-form-field>
+                    <mat-label>Favorite car</mat-label>
+                    <select matNativeControl [(ngModel)]="selectedCar" name="car">
+                      <option value="" selected></option>
+                      @for (car of cars; track car) {
+                        <option [value]="car.value">{{car.viewValue}}</option>
+                      }
+                    </select>
+                  </mat-form-field>
+                  <p> Selected car: {{selectedCar}} </p>
+
+ -->
+
+
                 <button mat-raised-button (click)="enviarinscricao()" color="primary">Enviar</button>
             </div>
         </mat-card-content>
